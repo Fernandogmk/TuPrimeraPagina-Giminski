@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     #'myapp_entrega1',
+    'Main',
     'blog',
+
 ]
 
 MIDDLEWARE = [

@@ -1,20 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <ul>
+{% extends 'Main/base.html' %}
+
+{% block title %}
+    Publicaciones 
+{% endblock title %}
+
+{% block content_title %}
+    Lista de publicaciones
+{% endblock content_title %}
+
+{% block content %}
+    <div class="row">
         {% for post in posts %}
-            <li>
-                <h2>{{ post.titulo }}</h2>
-                <p>{{ post.contenido }}</p>
-                <p>Publicado el: {{ post.fecha_publicacion }}</p>
-                <p>Actualizado el: {{ post.fecha_actualizacion }}</p>
-            </li>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body"> 
+                        <h2 class="card-title h5 text-dark">{{ post.titulo }}</h2>
+                        <p class="card-text">{{ post.contenido }}</p>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <small class="text-muted">Publicado el: {{ post.fecha_publicacion }}</small><br>
+                        <small class="text-muted">Actualizado el: {{ post.fecha_actualizacion }}</small>
+                    </div>
+                </div>
+            </div>
         {% endfor %}
-    
-</body>
-</html>
+    </div>
+{% endblock content %}
+
