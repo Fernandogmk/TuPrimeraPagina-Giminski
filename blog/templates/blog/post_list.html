@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        {% for post in posts %}
+            <li>
+                <h2>{{ post.titulo }}</h2>
+                <p>{{ post.contenido }}</p>
+                <p>Publicado el: {{ post.fecha_publicacion }}</p>
+                <p>Actualizado el: {{ post.fecha_actualizacion }}</p>
+            </li>
+        {% endfor %}
+    
+</body>
+</html>
