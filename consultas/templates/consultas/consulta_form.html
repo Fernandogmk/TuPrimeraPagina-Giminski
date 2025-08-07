@@ -1,0 +1,24 @@
+{% extends 'Main/base.html' %}
+
+{% block title %}
+    Consultar
+{% endblock title %}
+
+{% block content_title %}
+    Crear nueva consulta
+{% endblock content_title %}
+
+{% block content %}
+<div class="container pb-5">
+    <form method="post" class="shadow p-4 bg-light rounded">
+        {% csrf_token %}
+        <table class="table">
+            {{ form.as_table }}
+        </table>
+        <div class="text-center mt-3">
+            <input type="submit" value="Enviar" class="btn btn-dark px-4">
+            <a href="{% url 'blog:post_list' %}" class="btn btn-secondary ms-2">Cancelar</a>
+        </div>
+    </form>
+</div>
+{% endblock content %}
