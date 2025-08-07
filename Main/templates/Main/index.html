@@ -5,11 +5,11 @@
 {% endblock title %}
 
 {% block content_title %}
-    Blog sobre Python
+    Blog sobre Artistas
 {% endblock content_title %}
 
 {% block content %}
-    <button>
-        <a href="{% url 'blog:post_list' %}">Ingresar</a>
-    </button>
+<div class="text-center mt-5">
+    <a href="{% url 'blog:post_list' %}" class="btn btn-dark btn-lg px-5">Ingresar</a>
+</div>
 {% endblock content %}
