@@ -1,11 +1,11 @@
 {% extends 'Main/base.html' %}
 
 {% block title %}
-    Nueva Consulta
+    Nueva Categoría
 {% endblock title %}
 
 {% block content_title %}
-    Realizar nueva consulta
+    Crear nueva categoría
 {% endblock content_title %}
 
 {% block content %}
@@ -16,7 +16,7 @@
             {{ form.as_table }}
         </table>
         <div class="text-center mt-3">
-            <input type="submit" value="Enviar" class="btn btn-dark px-4">
+            <input type="submit" value="Guardar Categoría" class="btn btn-dark px-4">
             <a href="{% url 'consultas:consulta-list' %}" class="btn btn-secondary ms-2">Cancelar</a>
         </div>
     </form>

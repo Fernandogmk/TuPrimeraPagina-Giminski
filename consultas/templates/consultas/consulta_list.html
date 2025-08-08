@@ -1,0 +1,34 @@
+{% extends 'Main/base.html' %}
+
+{% block title %}
+    Consultas
+{% endblock title %}
+
+{% block content_title %}
+    Lista de consultas
+{% endblock content_title %}
+
+{% block content %}
+    <!-- FORMULARIO DE BÚSQUEDA -->
+    <div class="mb-4">
+        <form method="get" class="input-group">
+            <input type="text" name="q" class="form-control" placeholder="Buscar consulta...">
+            <button type="submit" class="btn btn-dark">Buscar</button>
+        </form>
+    </div>
+
+    <!-- LISTADO DE CONSULTAS EN BLOQUES SIMPLES -->
+    <div class="mb-5">
+        {% for consulta in consultas %}
+            <div class="mb-4 border-bottom pb-3">
+                <h2 class="h5 text-dark">{{ consulta.titulo }}</h2>
+                <p>{{ consulta.cuerpo }}</p>  <!-- CAMPO DEL CUERPO DE LA CONSULTA -->
+                <p class="text-muted"><strong>Categoría:</strong> {{ consulta.categoria }}</p>
+            </div>
+        {% empty %}
+            <p class="text-muted">No hay consultas disponibles.</p>
+        {% endfor %}
+    </div>
+
+{% endblock content %}
+
