@@ -1,5 +1,5 @@
 ﻿# blog_coder_giminski
 # entrega final - primera parte# 
-# superusuario: admin
-# psw: 123
+
+
 
